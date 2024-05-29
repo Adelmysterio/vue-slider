@@ -12,9 +12,9 @@
 <body>
     <div id="app">
         <div class="container">
-            <button>&leftarrow;</button>
+            <button @click="removeActiveIndex">&leftarrow;</button>
             <div class="slider-wrapper" tabindex="0">
-                <div v-for="(item, index) in slides" :key="index" v-show="index" class="item" >
+                <div v-for="(item, index) in slides" :key="index" v-show="index==activeIndex" class="item">
                     <img :src="item.image" :alt="item.title" />
                     <div class="text">
                         <h3>{{item.title}}</h3>
@@ -24,9 +24,11 @@
                     </div>
                 </div>
             </div>
-            <button>&rightarrow;</button>
+            <button @click="addActiveIndex">&rightarrow;</button>
         </div>
-
+        <div class="container">
+            <div class="thumbnail" v-for="item in slides"></div>
+        </div>
     </div>
 
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>

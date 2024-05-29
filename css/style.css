@@ -5,7 +5,7 @@
 }
 
 .container {
-    height: 100vh;
+    margin-top: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,4 +30,12 @@
     bottom: 20px;
     text-align: right;
     color: white;
+}
+
+.thumbnail {
+    height: 1rem;
+    width: 1rem;
+    background-color: blue;
+    display: inline-block;
+    margin: 2rem;
 }
