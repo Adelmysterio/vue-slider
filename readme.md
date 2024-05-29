@@ -11,3 +11,13 @@ il riciclo spesso va a braccetto con le funzioni! Sapendole sfruttare bene, l'es
 creo un ciclo v-for per slides sul div che contiene le immagini e le relative informazioni
 
 associo i vari valori all'interno del array ai tag corrispondenti usando v-bind e {{}}
+
+dichiaro una variabile activeindex = 0
+
+creo 2 funzioni in methods 
+    che aggiungano 1 se activeindex minore della lunghezza di slides - 1 altrenti activeindex = 0
+    che sottraggano 1 fino a che activeindex e' maggiore di 0 altrimenti active index = lunghezza di slides - 1
+
+creo un tag v-show all'interno del div item e pongo come condizione che index==activeindex
+
+collego le 2 funzioni ai relativi bottoni nel html
