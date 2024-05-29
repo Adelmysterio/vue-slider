@@ -27,7 +27,10 @@
             <button @click="addActiveIndex">&rightarrow;</button>
         </div>
         <div class="container">
-            <div class="thumbnail" v-for="item in slides"></div>
+            <div v-for="(item, index) in slides" :key="index">
+                <div class="thumbnail-show" v-if="activeIndex==index" @click="changeActiveIndex(index)"></div>
+                <div class="thumbnail-no-show" v-else @click="changeActiveIndex(index)"></div>
+            </div>
         </div>
     </div>
 

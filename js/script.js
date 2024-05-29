@@ -44,6 +44,9 @@ createApp({
                 this.activeIndex--
             }
             else { this.activeIndex = this.slides.length - 1 }
+        },
+        changeActiveIndex: function (i) {
+            this.activeIndex = i
         }
     }
 
